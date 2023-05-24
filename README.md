@@ -4,8 +4,6 @@ Resultados_de Analisis en la Compra de Alexa
 <div id="header" align="center">
     <img src="alexaamazon.jpg" width="600" />
     
-En el código que me proporcionaste, el algoritmo utiliza el modelo de clasificación `MultinomialNB` de Naive Bayes para clasificar las palabras y los datos en positivos y negativos. Aquí está la explicación paso a paso:
-
 1. Primero, se realiza un preprocesamiento de los datos de texto en el DataFrame `df`. Se eliminan los caracteres no alfabéticos, se convierten todas las letras a minúsculas y se aplica la técnica de stemming utilizando el algoritmo de Porter. Además, se eliminan las palabras de parada (stop words) en inglés, excepto algunas específicas.
 
 2. A continuación, se utiliza `CountVectorizer` de scikit-learn para convertir el corpus de texto preprocesado en una representación de características numéricas. El objeto `vectorizer` se ajusta a los datos de texto (`corpus`) y se transforma en una matriz de término-documento (`X`) utilizando `X = vectorizer.fit_transform(corpus)`. Esto asigna un valor numérico a cada palabra del corpus basado en su frecuencia en el texto.
